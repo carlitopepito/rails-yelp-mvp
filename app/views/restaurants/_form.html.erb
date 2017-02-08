@@ -1,3 +1,4 @@
+
 <%= simple_form_for(@restaurant) do |f| %>
   <%= f.error_notification %>
   <% if @restaurant.errors.any? %>
@@ -17,8 +18,9 @@
     <%= f.input :category, collection: Restaurant::CATEGORIES%>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-actions text-cented">
+    <%= f.button :submit, class:'btn btn-primary' %>
   </div>
 
 <% end %>
+

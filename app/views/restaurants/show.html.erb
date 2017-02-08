@@ -1,26 +1,31 @@
-<h1><%= @restaurant.name %></h1>
+<div class='container'>
+  <h1><%= @restaurant.name %></h1>
 
-<p>
-  <strong>Address:</strong>
-  <%= @restaurant.address %>
-</p>
+  <p>
+    <strong>Address:</strong>
+    <%= @restaurant.address %>
+  </p>
 
-<p>
-  <strong>Phone Number:</strong>
-  <%= @restaurant.phone_number %>
-</p>
+  <p>
+    <strong>Phone Number:</strong>
+    <%= @restaurant.phone_number %>
+  </p>
 
-<p>
-  <strong>Category :</strong>
-  <%= @restaurant.category %>
-</p>
+  <p>
+    <strong>Category :</strong>
+    <%= @restaurant.category %>
+  </p>
 
-<h3>Les commentaires de <%= @restaurant.name %></h3>
-<% @restaurant.reviews.each do |review| %>
-  <p><strong><%= review.content %></strong></p>
-  <p>Note: <%= review.rating %></p>
-<% end %>
+  <h3>Les commentaires de <%= @restaurant.name %></h3>
+  <% @restaurant.reviews.each do |review| %>
+    <p><strong><%= review.content %></strong></p>
+    <p>Note: <%= review.rating %></p>
+  <% end %>
 
-<%= link_to 'Add a review', new_restaurant_review_path(@restaurant) %>
-<br>
-<%= link_to 'Back', restaurants_path %>
+  <%= link_to 'Add a review', new_restaurant_review_path(@restaurant) %>
+  <br>
+  <div class='text-center padded'>
+    <%= link_to 'Back', restaurants_path %>
+  </div>
+
+</div>
